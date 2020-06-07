@@ -32,31 +32,15 @@ var selectMageEyes = function () {
   return randomYeys;
 };
 
-var wizards = [
-  {
-    name: selectMageName(),
-    coatColor: selectMageCoat(),
-    eyesColor: selectMageEyes()
-  },
+var wizards = [];
 
-  {
+for (var i = 0; i < 4; i++) {
+  wizards.push({
     name: selectMageName(),
     coatColor: selectMageCoat(),
     eyesColor: selectMageEyes()
-  },
-  {
-
-    name: selectMageName(),
-    coatColor: selectMageCoat(),
-    eyesColor: selectMageEyes()
-  },
-  {
-
-    name: selectMageName(),
-    coatColor: selectMageCoat(),
-    eyesColor: selectMageEyes()
-  }
-];
+  });
+}
 
 var renderWizard = function (wizard) {
   var wizardElement = similarWizardTemplate.cloneNode(true);
@@ -70,9 +54,10 @@ var renderWizard = function (wizard) {
 };
 
 var fragment = document.createDocumentFragment();
-for (var i = 0; i < wizards.length; i++) {
-  fragment.appendChild(renderWizard(wizards[i]));
+for (var b = 0; b < wizards.length; b++) {
+  fragment.appendChild(renderWizard(wizards[b]));
 }
+
 similarListElement.appendChild(fragment);
 
 userDialog.querySelector('.setup-similar').classList.remove('hidden');
