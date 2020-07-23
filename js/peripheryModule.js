@@ -10,10 +10,8 @@
   window.MathModule = {
     randomInteger: randomInteger
   };
-})();
 
-// Модуль колорации мага
-(function () {
+  // Модуль колорации мага
   window.colorize = function (element, arrElement, input) {
     element.addEventListener('click', function () {
       if (element.tagName.toLowerCase() === 'div') {

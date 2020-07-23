@@ -52,10 +52,8 @@
       closePopup();
     }
   });
-})();
 
-// Функция перетаскивания окна.
-(function () {
+  // Функция перетаскивания окна.
   var setupDialogElement = document.querySelector('.setup');
   var dialogHandle = setupDialogElement.querySelector('.upload');
   var LEFT_MOUSE_BUTTON = 0;
